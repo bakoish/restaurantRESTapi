@@ -35,4 +35,15 @@ public class Dish {
     @JsonIgnoreProperties("dish")
     private Order order;
 
+    public Dish(@NonNull String name, String description, BigDecimal price) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Dish{" + "id=" + this.id + ", name='" + this.name + '\'' + ", description='" + this.description + '\'' + ", price='" + this.price + '}';
+    }
+
 }

@@ -32,4 +32,9 @@ public class Address {
         this.country = country;
         this.phoneNumber = phoneNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" + "id=" + this.id + ", name='" + this.address + '\'' + ", postCode='" + this.postCode + '\'' + ", country='" + this.country + ", phoneNumber='" + this.phoneNumber + '}';
+    }
 }

@@ -1,9 +1,7 @@
 package com.bakoish.restaurantRESTful.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.Setter;
+import com.sun.xml.bind.v2.TODO;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -27,6 +25,23 @@ public class Customer {
     public Customer(@NonNull String name, String surname, Address address) {
         this.name = name;
         this.surname = surname;
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" + "id=" + this.id + ", name='" + this.name + '\'' + ", surname='" + this.surname + '\'' + ", Adresss='" + this.address + '}';
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setAddress(Address address) {
         this.address = address;
     }
 }
