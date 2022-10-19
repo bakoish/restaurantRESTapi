@@ -18,7 +18,7 @@ public class CustomerService {
 
     @Transactional
     public List<Customer> getAllCustomers() {
-        return customerRepository.findAll();
+        return customerRepository.findAllCustomers();
     }
 
     @Transactional
