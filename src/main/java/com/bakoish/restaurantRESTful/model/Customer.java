@@ -18,7 +18,6 @@ public class Customer {
     @NonNull
     private String name;
     private String surname;
-
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private Address address;
 

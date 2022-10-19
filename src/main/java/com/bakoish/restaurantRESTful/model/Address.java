@@ -26,8 +26,8 @@ public class Address {
     @NonNull
     private String phoneNumber;
 
-    public Address(@NonNull String postCode, @NonNull String country, @NonNull String phoneNumber) {
-
+    public Address(@NonNull String address, @NonNull String postCode, @NonNull String country, @NonNull String phoneNumber) {
+        this.address = address;
         this.postCode = postCode;
         this.country = country;
         this.phoneNumber = phoneNumber;
