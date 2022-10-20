@@ -31,4 +31,9 @@ public class Order {
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, fetch = FetchType.EAGER, mappedBy = "order")
     private List<Dish> dishes = new ArrayList<>();
 
+    public Order(LocalDate orderDate, Customer customer, List<Dish> dishes) {
+        this.orderDate = orderDate;
+        this.customer = customer;
+        this.dishes = dishes;
+    }
 }

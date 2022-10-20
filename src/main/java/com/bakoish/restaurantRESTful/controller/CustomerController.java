@@ -1,6 +1,7 @@
 package com.bakoish.restaurantRESTful.controller;
 
 import com.bakoish.restaurantRESTful.model.Customer;
+import com.bakoish.restaurantRESTful.model.dto.CustomerDto;
 import com.bakoish.restaurantRESTful.service.CustomerService;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,12 +27,12 @@ public class CustomerController {
     }
 
     @PostMapping("/")
-    public Customer postCustomer(@RequestBody Customer customer) {
-        return customerService.postSingleCustomer(customer);
+    public Customer postCustomer(@RequestBody CustomerDto customerDto) {
+        return customerService.postSingleCustomer(customerDto);
     }
 
     @PutMapping("/{customerId}")
-    public Customer putCustomer(@RequestBody Customer customer, @PathVariable("customerId") Long customerId) {
-        return customerService.putSingleCustomer(customer, customerId);
+    public Customer putCustomer(@RequestBody CustomerDto customerDto, @PathVariable("customerId") Long customerId) {
+        return customerService.putSingleCustomer(customerDto, customerId);
     }
 }
